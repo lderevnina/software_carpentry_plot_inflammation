@@ -6,6 +6,7 @@
 #.libPaths("C:/Users/SDSC/Documents/R/win-library/3.1")
  
 # Load libraries
+# Heres a random comment 
 require(ggplot2)
 require(reshape2)
  
@@ -18,7 +19,7 @@ data.in <- read.csv(options[1])
 # melt with defaults
 data.in.melted <- melt(data.in)
 
-#create a plot with GGPLOT _ 
+#create a plot with GGPLOT 
 out.plot <- ggplot(data.in.melted,(aes(x=PatientID, y=value))) + 
     geom_point() + 
     stat_sum() +
