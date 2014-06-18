@@ -39,5 +39,7 @@ plot(plot_three_countries)
 plot(plot_Australia)
 plot(plot_New_Zealand)
 plot(plot_United_states)
+plot(hist_lifeExp)
+plot(hist_lifeExp_bin5)
 ```
 

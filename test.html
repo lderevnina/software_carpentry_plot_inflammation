@@ -201,6 +201,13 @@ plot_three_countries &lt;- ggplot(three_countries, aes(x=year, y=gdpPercap, colo
 plot_Australia &lt;- ggplot(Australia, aes(x=year, y=gdpPercap)) + geom_point(size=2, colour = &quot;red&quot;)
 plot_New_Zealand &lt;- ggplot(New_Zealand, aes(x=year, y=gdpPercap)) + geom_point(size=2, colour = &quot;blue&quot;)
 plot_United_states &lt;- ggplot(United_states, aes(x=year, y=gdpPercap)) + geom_point(size=2, colour = &quot;dark green&quot;)
+
+min_lifeExp &lt;- aggregate(lifeExp ~ continent, data, FUN = min)
+max_lifeExp &lt;- aggregate(lifeExp ~ continent, data, FUN = max)
+mean_lifeExp &lt;- aggregate(lifeExp ~ continent, data, FUN = mean)
+
+hist_lifeExp &lt;- ggplot(data, aes(x=lifeExp)) + geom_histogram()
+hist_lifeExp_bin5 &lt;- ggplot(data, aes(x=lifeExp)) + geom_histogram(binwidth=5)
 </code></pre>
 
 <p>You can also embed plots, for example:</p>
